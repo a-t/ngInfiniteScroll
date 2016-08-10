@@ -63,7 +63,7 @@ angular.module(MODULE_NAME, [])
       function defaultHandler() {
         let containerBottom;
         let elementBottom;
-        if (container === windowElement) {
+        if (container[0] === $window) {
           containerBottom = height(container) + pageYOffset(container[0].document.documentElement);
           elementBottom = offsetTop(elem) + height(elem);
         } else {
